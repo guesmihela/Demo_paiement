@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include payment_management *.css
+recursive-include payment_management *.csv
+recursive-include payment_management *.html
+recursive-include payment_management *.ico
+recursive-include payment_management *.js
+recursive-include payment_management *.json
+recursive-include payment_management *.md
+recursive-include payment_management *.png
+recursive-include payment_management *.py
+recursive-include payment_management *.svg
+recursive-include payment_management *.txt
+recursive-exclude payment_management *.pyc
