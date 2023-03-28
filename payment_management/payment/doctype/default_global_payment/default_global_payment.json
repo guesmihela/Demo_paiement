@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-21 15:40:03.174242",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "default_societe",
+  "current_fiscal_year",
+  "country",
+  "column_break_i2idj",
+  "default_distance_unit",
+  "default_currency",
+  "hide_currency_symbol"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_societe",
+   "fieldtype": "Link",
+   "label": "Societe Par Defaut",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "current_fiscal_year",
+   "fieldtype": "Link",
+   "label": "Ann\u00e9e fiscale en cours",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Pays",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_i2idj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_distance_unit",
+   "fieldtype": "Link",
+   "label": "Unit\u00e9 de distance par d\u00e9faut",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Devise par d\u00e9faut",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "hide_currency_symbol",
+   "fieldtype": "Select",
+   "label": "Masquer le symbole mon\u00e9taire",
+   "options": "\nNo\nYes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-03-21 15:40:03.174242",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Default Global payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

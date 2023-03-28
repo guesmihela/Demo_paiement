@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-08 15:00:25.117421",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "currency_account",
+  "from_date",
+  "to_date",
+  "account_bank",
+  "payment_entries"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Data",
+   "label": "Compte"
+  },
+  {
+   "fieldname": "currency_account",
+   "fieldtype": "Data",
+   "label": "Devise Compte"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Data",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Data",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "account_bank",
+   "fieldtype": "Data",
+   "label": "Compte bancaire"
+  },
+  {
+   "fieldname": "payment_entries",
+   "fieldtype": "Table",
+   "label": "Payments  Details",
+   "options": "Details Virements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-08 15:30:28.844419",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Compensation cheque",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

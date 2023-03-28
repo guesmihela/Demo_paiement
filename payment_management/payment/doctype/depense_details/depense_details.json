@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-15 11:31:18.432793",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "tiers",
+  "montant_net",
+  "default_currency",
+  "nature_depense",
+  "date_emission",
+  "column_break_wgwso",
+  "mode_payment",
+  "state",
+  "ref_virement",
+  "num_cheque",
+  "service_depense",
+  "date_validation"
+ ],
+ "fields": [
+  {
+   "fieldname": "montant_net",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant net",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nature_depense",
+   "fieldtype": "Link",
+   "label": "Nature de d\u00e9pense",
+   "options": "Nature"
+  },
+  {
+   "fieldname": "service_depense",
+   "fieldtype": "Link",
+   "label": "Service de d\u00e9pense",
+   "options": "Service"
+  },
+  {
+   "fieldname": "mode_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode de r\u00e8glement",
+   "options": "\nCheque\nVirement\nEspeces",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nCREE\nEMISE\nVALIDEE",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Virement'",
+   "fieldname": "ref_virement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref\u00e9rence Virement"
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Cheque'",
+   "fieldname": "num_cheque",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00b0 Cheque"
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Emission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Devise",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "B\u00e9n\u00e9ficiaire",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "R\u00e9f\u00e9rence"
+  },
+  {
+   "fieldname": "column_break_wgwso",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_validation",
+   "fieldtype": "Date",
+   "label": "Date Validation",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-27 08:47:27.130010",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Depense_Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

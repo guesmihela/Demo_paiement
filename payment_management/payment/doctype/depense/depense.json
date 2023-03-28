@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-13 11:42:30.544461",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tiers",
+  "party_type",
+  "rib",
+  "column_break_uul4b",
+  "first_name",
+  "last_name",
+  "cin_party",
+  "rne_party",
+  "social_reason",
+  "section_break_brrio",
+  "expenses"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.tiers",
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RIB par defaut",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Benificiaire",
+   "options": "Tiers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Depenses",
+   "options": "Depense_Details"
+  },
+  {
+   "fieldname": "column_break_uul4b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Individual'",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "Nom"
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Individual'",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Prenom"
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Company'",
+   "fieldname": "social_reason",
+   "fieldtype": "Data",
+   "label": "Raison Social"
+  },
+  {
+   "fieldname": "section_break_brrio",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.tiers ",
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Type B\u00e9neficiaire",
+   "options": "Company\nIndividual",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Individual'",
+   "fieldname": "cin_party",
+   "fieldtype": "Data",
+   "label": "CIN"
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Company'",
+   "fieldname": "rne_party",
+   "fieldtype": "Data",
+   "label": "RNE"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-16 17:30:05.688362",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Depense",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

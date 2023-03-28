@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-16 17:48:40.044203",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "societe_name",
+  "accounts",
+  "default_currency",
+  "column_break_f8h3q",
+  "payment_mode",
+  "banque",
+  "rib",
+  "rib_party",
+  "section_break_dn10l",
+  "expenses"
+ ],
+ "fields": [
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Depenses",
+   "options": "Depense_Details"
+  },
+  {
+   "depends_on": "eval:doc.societe_name && doc.accounts",
+   "fieldname": "rib_party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RIB par defaut",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.societe_name ",
+   "fieldname": "accounts",
+   "fieldtype": "Link",
+   "label": "Comptes",
+   "options": "Compte Societe"
+  },
+  {
+   "fieldname": "societe_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Soci\u00e9t\u00e9",
+   "options": "Societe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode Reglement",
+   "options": "\nCheque\nVirement\nEsp\u00e8ces\nCarte bancaire",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_f8h3q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dn10l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.societe_name && doc.accounts",
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Devise du Compte",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.societe_name && doc.accounts",
+   "fieldname": "banque",
+   "fieldtype": "Link",
+   "label": "Banque",
+   "options": "Banque",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.societe_name && doc.accounts",
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "label": "RIB",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 09:21:01.276596",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Reglement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

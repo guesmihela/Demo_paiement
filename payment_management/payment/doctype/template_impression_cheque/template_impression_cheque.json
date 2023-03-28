@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:bank_name",
+ "creation": "2023-03-08 14:33:44.951205",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "has_print_format",
+  "cheque_settings",
+  "bank_name",
+  "cheque_size",
+  "column_break_tbyld",
+  "cheque_width",
+  "cheque_height",
+  "parametres_num_cheque",
+  "dist_num_cheque_top_edge",
+  "dist_num_cheque_left_edge",
+  "column_break_rbswd",
+  "dist_lb_num_cheque_top_edge",
+  "dist_lb_num_cheque_left_edge",
+  "agence_settings",
+  "distance_agence_name_top",
+  "distance_agence_name_left",
+  "distance_adresse_agence_top",
+  "distance_adress_agence_left",
+  "column_break_pzeku",
+  "distance_tel_top_edge",
+  "distance_tel_left_edge",
+  "postal_code_top_edge",
+  "postal_code_left_edge",
+  "parametres_date_section",
+  "date_dist_from_top_edge",
+  "date_dist_from_left_edge",
+  "column_break_qsopv",
+  "place_dist_from_top_edge",
+  "place_dist_from_left_edge",
+  "parametres_titulaire_compte_section",
+  "payer_name_from_top_edge",
+  "payer_name_from_left_edge",
+  "column_break_lb3lq",
+  "acc_no_dist_from_top_edge",
+  "acc_no_dist_from_left_edge",
+  "amount_in_words",
+  "amt_in_word_width",
+  "amt_in_words_from_left_edge",
+  "lb_amt_in_words_from_top_edge",
+  "lb_size",
+  "column_break_owbni",
+  "amt_in_words_line_spacing",
+  "amt_in_words_from_top_edge",
+  "lb_amt_in_words_from_left_edge",
+  "montant_en_chiffres_section",
+  "amt_in_figures_from_top_edge",
+  "amt_in_figures_from_left_edge",
+  "column_break_x7adf",
+  "lb_amt_in_figures_from_left_edge",
+  "logo_setting",
+  "largeur_logo",
+  "hauteur_logo",
+  "taille_logo",
+  "column_break_4teoq",
+  "distance_logo_du_bord_top",
+  "distance_logo_du_bord__left",
+  "logo_cheque",
+  "parametre_signature_section",
+  "signatory_from_top_edge",
+  "column_break_f11ea",
+  "signatory_from_left_edge",
+  "parametre_benificiaire_section",
+  "dist_b\u00e9n\u00e9ficiaire_name_top_edge",
+  "column_break_2zaa0",
+  "dist_b\u00e9n\u00e9ficiaire_name_left_edge",
+  "div_payable_height",
+  "div_payable_width",
+  "div_pay_top_edge",
+  "div_pay_left_edge",
+  "preview",
+  "cheque_print_preview"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "has_print_format",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Format impression",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Banque",
+   "no_copy": 1,
+   "options": "Banque",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cheque_size",
+   "fieldtype": "Select",
+   "label": "Taille cheque",
+   "options": "Regular\nA4"
+  },
+  {
+   "fieldname": "cheque_width",
+   "fieldtype": "Float",
+   "label": "Largeur Cheque "
+  },
+  {
+   "fieldname": "cheque_height",
+   "fieldtype": "Float",
+   "label": "Hauteur cheque"
+  },
+  {
+   "fieldname": "date_dist_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "amt_in_words_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Section Break",
+   "label": "Aper\u00e7u"
+  },
+  {
+   "fieldname": "cheque_print_preview",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "cheque_settings",
+   "fieldtype": "Section Break",
+   "label": "Param\u00e9tres Cheque"
+  },
+  {
+   "fieldname": "agence_settings",
+   "fieldtype": "Section Break",
+   "label": "Parametres Agence"
+  },
+  {
+   "fieldname": "parametres_date_section",
+   "fieldtype": "Section Break",
+   "label": "Parametres Date"
+  },
+  {
+   "fieldname": "parametres_titulaire_compte_section",
+   "fieldtype": "Section Break",
+   "label": "Parametres Titulaire Compte"
+  },
+  {
+   "fieldname": "parametre_signature_section",
+   "fieldtype": "Section Break",
+   "label": "Parametre Signature"
+  },
+  {
+   "fieldname": "amount_in_words",
+   "fieldtype": "Section Break",
+   "label": "Montant en mots"
+  },
+  {
+   "fieldname": "logo_setting",
+   "fieldtype": "Section Break",
+   "label": "Parametres Logo"
+  },
+  {
+   "fieldname": "largeur_logo",
+   "fieldtype": "Float",
+   "label": "Largeur Logo"
+  },
+  {
+   "fieldname": "hauteur_logo",
+   "fieldtype": "Float",
+   "label": "Hauteur Logo"
+  },
+  {
+   "fieldname": "distance_logo_du_bord_top",
+   "fieldtype": "Float",
+   "label": "Distance Logo du bord Top"
+  },
+  {
+   "fieldname": "distance_logo_du_bord__left",
+   "fieldtype": "Float",
+   "label": "Distance Logo du bord  left"
+  },
+  {
+   "fieldname": "taille_logo",
+   "fieldtype": "Float",
+   "label": "Taille Logo"
+  },
+  {
+   "fieldname": "montant_en_chiffres_section",
+   "fieldtype": "Section Break",
+   "label": "Montant en chiffres"
+  },
+  {
+   "fieldname": "amt_in_word_width",
+   "fieldtype": "Float",
+   "label": "Largeur du montant en mot"
+  },
+  {
+   "fieldname": "amt_in_figures_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "amt_in_figures_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance du bord gauche"
+  },
+  {
+   "fieldname": "signatory_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Position de d\u00e9part \u00e0 partir du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "signatory_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "payer_name_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance titulaire du  compte du bord superieur"
+  },
+  {
+   "fieldname": "payer_name_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Distanc titulaire du Comptedu bord gauche"
+  },
+  {
+   "fieldname": "acc_no_dist_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance Num compte du bord superieur"
+  },
+  {
+   "fieldname": "acc_no_dist_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance Num compte du bord gauche"
+  },
+  {
+   "fieldname": "column_break_tbyld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qsopv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distance_agence_name_top",
+   "fieldtype": "Float",
+   "label": "Distance Nom Agence du bord superieur"
+  },
+  {
+   "fieldname": "distance_adresse_agence_top",
+   "fieldtype": "Float",
+   "label": "Distance Adresse Agencedu bord superieur"
+  },
+  {
+   "fieldname": "distance_adress_agence_left",
+   "fieldtype": "Float",
+   "label": "Distance Adresse du bord gauche"
+  },
+  {
+   "fieldname": "distance_tel_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance du tel du bord Gauche"
+  },
+  {
+   "fieldname": "distance_agence_name_left",
+   "fieldtype": "Float",
+   "label": "Distance Nom Agence du bord gauche"
+  },
+  {
+   "fieldname": "distance_tel_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance T\u00e9l du bord superieur"
+  },
+  {
+   "fieldname": "postal_code_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance Code Postal du bord superieur"
+  },
+  {
+   "fieldname": "postal_code_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance Code Postal du bord gauche"
+  },
+  {
+   "fieldname": "column_break_pzeku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lb3lq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_owbni",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4teoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_x7adf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f11ea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "logo_cheque",
+   "fieldtype": "Attach",
+   "label": "Logo Ch\u00e8que "
+  },
+  {
+   "fieldname": "parametre_benificiaire_section",
+   "fieldtype": "Section Break",
+   "label": "Parametre Benificiaire "
+  },
+  {
+   "fieldname": "column_break_2zaa0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_dist_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord superieur"
+  },
+  {
+   "fieldname": "amt_in_words_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord top"
+  },
+  {
+   "fieldname": "amt_in_words_line_spacing",
+   "fieldtype": "Float",
+   "label": "Interligne pour le montant en mot"
+  },
+  {
+   "fieldname": "div_payable_height",
+   "fieldtype": "Data",
+   "label": "Hauteur du div Payable A"
+  },
+  {
+   "fieldname": "div_payable_width",
+   "fieldtype": "Data",
+   "label": "Largeur du div Payable A"
+  },
+  {
+   "fieldname": "div_pay_top_edge",
+   "fieldtype": "Data",
+   "label": "Emplacement du div payable du bord superieur"
+  },
+  {
+   "fieldname": "div_pay_left_edge",
+   "fieldtype": "Data",
+   "label": "Emplacement du Div payable du bord gauche"
+  },
+  {
+   "fieldname": "place_dist_from_top_edge",
+   "fieldtype": "Float",
+   "label": "distance du lieu o\u00f9 le ch\u00e8que est cr\u00e9\u00e9 du bord  superieur"
+  },
+  {
+   "fieldname": "place_dist_from_left_edge",
+   "fieldtype": "Float",
+   "label": "distance du lieu o\u00f9 le ch\u00e8que est cr\u00e9\u00e9 du bord  gauche"
+  },
+  {
+   "fieldname": "parametres_num_cheque",
+   "fieldtype": "Section Break",
+   "label": "Parametres N\u00b0 du cheque"
+  },
+  {
+   "fieldname": "dist_num_cheque_top_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement Num Cheque du bord superieur"
+  },
+  {
+   "fieldname": "column_break_rbswd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dist_num_cheque_left_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement Num cheque du bord gauche"
+  },
+  {
+   "fieldname": "dist_b\u00e9n\u00e9ficiaire_name_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance Nom du b\u00e9n\u00e9ficiaire du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "dist_b\u00e9n\u00e9ficiaire_name_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance Nom du b\u00e9n\u00e9ficiaire du bord gauche"
+  },
+  {
+   "fieldname": "lb_amt_in_figures_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement Label du bord gauche"
+  },
+  {
+   "fieldname": "lb_amt_in_words_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement Label du bord superieur"
+  },
+  {
+   "fieldname": "lb_amt_in_words_from_left_edge",
+   "fieldtype": "Data",
+   "label": "Emplacement Label du bord gauche"
+  },
+  {
+   "fieldname": "lb_size",
+   "fieldtype": "Float",
+   "label": "Label SIze"
+  },
+  {
+   "fieldname": "dist_lb_num_cheque_top_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement label du bord superieur"
+  },
+  {
+   "fieldname": "dist_lb_num_cheque_left_edge",
+   "fieldtype": "Float",
+   "label": "Emplacement du label  du bord gauche"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 13:06:59.297179",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Template Impression Cheque",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:account_name",
+ "creation": "2023-03-08 12:12:22.429308",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "account",
+  "bank",
+  "account_type",
+  "column_break_zoeho",
+  "is_default",
+  "is_company",
+  "societe",
+  "account_details_section",
+  "bank_account_no",
+  "iban",
+  "column_break_uyzvm",
+  "rib_account",
+  "account_currency",
+  "adress_and_contact_section",
+  "address",
+  "column_break_9u4ao",
+  "contact",
+  "section_break_ln9vk",
+  "integration_id",
+  "column_break_8yrbh",
+  "last_integration_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nom Compte",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Banque",
+   "options": "Banque",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Link",
+   "label": "Type Compte",
+   "options": "Type Compte"
+  },
+  {
+   "depends_on": "eval:doc.is_company == 1",
+   "fieldname": "societe",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "mandatory_depends_on": "eval:doc.is_company == 1",
+   "options": "Societe"
+  },
+  {
+   "depends_on": "eval:doc.is_company == 1",
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Compte Societe",
+   "mandatory_depends_on": "eval:doc.is_company == 1",
+   "options": "Compte Societe"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Par Defaut",
+   "read_only": 1
+  },
+  {
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "label": "IBAN"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No Compte Bancaire "
+  },
+  {
+   "fieldname": "account_details_section",
+   "fieldtype": "Section Break",
+   "label": "Details Compte"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "adress_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Adresse et Contact"
+  },
+  {
+   "fieldname": "rib_account",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "RIB"
+  },
+  {
+   "fieldname": "account_currency",
+   "fieldtype": "Link",
+   "label": "Devise Compte",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_ln9vk",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "D\u00e9tails Integrations"
+  },
+  {
+   "fieldname": "integration_id",
+   "fieldtype": "Data",
+   "label": "Inegration ID"
+  },
+  {
+   "fieldname": "last_integration_date",
+   "fieldtype": "Date",
+   "label": "last integration Date"
+  },
+  {
+   "fieldname": "column_break_zoeho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uyzvm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9u4ao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8yrbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_company",
+   "fieldtype": "Check",
+   "label": "Societe"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 08:58:17.064122",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Compte",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

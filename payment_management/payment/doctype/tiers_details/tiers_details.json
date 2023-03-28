@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-15 11:59:49.247383",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compte",
+  "rib",
+  "is_default"
+ ],
+ "fields": [
+  {
+   "fieldname": "compte",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Compte",
+   "options": "Compte"
+  },
+  {
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RIB"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Par Defaut"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-15 12:10:30.036656",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Tiers_Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

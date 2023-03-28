@@ -1,0 +1,141 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"gFATp2t89x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Payment</span>\",\"col\":12}},{\"id\":\"v8iMhWrF3t\",\"type\":\"card\",\"data\":{\"card_name\":\"Societ\u00e9\",\"col\":4}},{\"id\":\"OAZ34sclZp\",\"type\":\"card\",\"data\":{\"card_name\":\"D\u00e9tails Bancaires\",\"col\":4}},{\"id\":\"Omzh4Q7vCp\",\"type\":\"card\",\"data\":{\"card_name\":\"Payment\",\"col\":4}}]",
+ "creation": "2023-03-21 14:23:27.297876",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Payment",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Societ\u00e9",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Soci\u00e9t\u00e9",
+   "link_count": 0,
+   "link_to": "Societe",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compte Soci\u00e9t\u00e9",
+   "link_count": 0,
+   "link_to": "Compte Societe",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "D\u00e9tails Bancaires",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tiers",
+   "link_count": 0,
+   "link_to": "Tiers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compte Bancaire",
+   "link_count": 0,
+   "link_to": "Compte",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Type Compte",
+   "link_count": 0,
+   "link_to": "Type Compte",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Banque",
+   "link_count": 0,
+   "link_to": "Banque",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Depenses",
+   "link_count": 0,
+   "link_to": "Despenses",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "payment",
+   "link_count": 0,
+   "link_to": "Reglement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Template Impression Cheque",
+   "link_count": 0,
+   "link_to": "Template Impression Cheque",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-03-27 13:05:15.847302",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Payment",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Payment"
+}
