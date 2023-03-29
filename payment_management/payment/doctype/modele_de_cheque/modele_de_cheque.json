@@ -1,0 +1,512 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nom_de_banque",
+ "creation": "2023-03-13 14:44:32.318440",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "settings",
+  "section_break_0zmaw",
+  "nom_de_banque",
+  "cheque_size",
+  "column_break_ttj9i",
+  "largeur_du_cheque",
+  "check_supp",
+  "column_break_vfvhz",
+  "hauteur_du_cheque",
+  "check_gauche",
+  "check",
+  "montant",
+  "logo_section",
+  "logo",
+  "logo_inf",
+  "column_break_spkdj",
+  "logo_gauche",
+  "largeur_logo",
+  "column_break_krmxw",
+  "hauteur_logo",
+  "taille_logo",
+  "numero_du_cheque_section",
+  "num_supp",
+  "column_break_bodc6",
+  "num_gauche",
+  "section_break_qonql",
+  "chiffre",
+  "chiff_sup",
+  "chiff_gauche",
+  "column_break_szzbk",
+  "setting",
+  "lettre_supp",
+  "lettre_gauche",
+  "column_break_gjn0n",
+  "world_lettre",
+  "largeur_du_montant_en_mot",
+  "line_spacing_for_amount_in_words",
+  "b\u00e9n\u00e9ficier_section",
+  "ben_supp",
+  "column_break_4d11v",
+  "ben_gauche",
+  "signature_section",
+  "sign_supp",
+  "column_break_11v1r",
+  "sign_gauche",
+  "payable_a_section",
+  "adresse_b",
+  "add_supp",
+  "add_gauche",
+  "column_break_mtrmc",
+  "tel_banque",
+  "tel_supp",
+  "tel_gauche",
+  "column_break_3t5ec",
+  "date_banque",
+  "date_cpt_supp",
+  "date_cpt_gauche",
+  "titulaire_du_compte_section",
+  "num_cpt",
+  "num_cpt_supp",
+  "num_cpt_gauche",
+  "column_break_bbnir",
+  "nom_pre",
+  "nom_supp",
+  "nom_gauche",
+  "column_break_a8aty",
+  "lieu",
+  "lieu_supp",
+  "lieu_gauche",
+  "column_break_xm88r",
+  "date",
+  "date_supp",
+  "date_gauche",
+  "preview",
+  "cheque_print_preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "settings",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h3> Toutes les dimensions en centim\u00e8tre uniquement </h3>\n</div>"
+  },
+  {
+   "fieldname": "nom_de_banque",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nom de banque",
+   "options": "Banque",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_0zmaw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ttj9i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "check"
+  },
+  {
+   "depends_on": "eval:doc.check",
+   "fieldname": "montant",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Montant"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_qonql",
+   "fieldtype": "Section Break",
+   "label": "Montant en chiffre et en lettre"
+  },
+  {
+   "fieldname": "column_break_szzbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "setting",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> pour les lettres </h5>\n</div>"
+  },
+  {
+   "default": "10",
+   "fieldname": "largeur_du_montant_en_mot",
+   "fieldtype": "Float",
+   "label": "Largeur du montant en mot"
+  },
+  {
+   "fieldname": "line_spacing_for_amount_in_words",
+   "fieldtype": "Float",
+   "label": "Interligne pour le montant en toutes lettres"
+  },
+  {
+   "fieldname": "chiffre",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> pour les chiffres </h5>\n</div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "numero_du_cheque_section",
+   "fieldtype": "Section Break",
+   "label": "Numero du cheque"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach",
+   "label": "Logo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "b\u00e9n\u00e9ficier_section",
+   "fieldtype": "Section Break",
+   "label": "B\u00e9n\u00e9ficiere"
+  },
+  {
+   "default": "3.5",
+   "fieldname": "ben_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "2.5",
+   "fieldname": "ben_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Signature"
+  },
+  {
+   "default": "0",
+   "fieldname": "sign_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "0",
+   "fieldname": "sign_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payable_a_section",
+   "fieldtype": "Section Break",
+   "label": "Payable a"
+  },
+  {
+   "fieldname": "adresse_b",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Adresse du banque </h5>\n</div>"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_mtrmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tel_banque",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Telephone du banque </h5>\n</div>"
+  },
+  {
+   "fieldname": "tel_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "tel_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_3t5ec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_banque",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Date de creation du compte </h5>\n</div>"
+  },
+  {
+   "fieldname": "date_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "date_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "date_cpt_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "date_cpt_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "titulaire_du_compte_section",
+   "fieldtype": "Section Break",
+   "label": "Titulaire du compte"
+  },
+  {
+   "fieldname": "num_cpt",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Numero du compte</h5>\n</div>"
+  },
+  {
+   "fieldname": "num_cpt_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "num_cpt_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_bbnir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nom_pre",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Nom et Prenon</h5>\n</div>"
+  },
+  {
+   "fieldname": "nom_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "nom_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_a8aty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lieu",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Lieu </h5>\n</div>"
+  },
+  {
+   "fieldname": "lieu_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "fieldname": "lieu_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_xm88r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Date </h5>\n</div>"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Section Break",
+   "label": "Preview"
+  },
+  {
+   "depends_on": "eval:doc.check",
+   "fieldname": "check_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "depends_on": "eval:doc.check",
+   "fieldname": "check_gauche",
+   "fieldtype": "Float",
+   "label": "Distance du bord gauche"
+  },
+  {
+   "default": "1.1",
+   "fieldname": "num_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "2.2",
+   "fieldname": "num_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "collapsible": 1,
+   "default": "0.83",
+   "fieldname": "chiff_sup",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "13.2",
+   "fieldname": "chiff_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "default": "2.5",
+   "fieldname": "lettre_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "5.9",
+   "fieldname": "lettre_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "default": "6.4",
+   "fieldname": "logo_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche6.4"
+  },
+  {
+   "fieldname": "column_break_vfvhz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "17.7",
+   "fieldname": "largeur_du_cheque",
+   "fieldtype": "Float",
+   "label": "largeur du ch\u00e9que"
+  },
+  {
+   "default": "8",
+   "fieldname": "hauteur_du_cheque",
+   "fieldtype": "Float",
+   "label": "hauteur du ch\u00e9que"
+  },
+  {
+   "fieldname": "cheque_print_preview",
+   "fieldtype": "HTML"
+  },
+  {
+   "default": "0.5",
+   "fieldname": "logo_inf",
+   "fieldtype": "Float",
+   "label": "Distance du bord superieur"
+  },
+  {
+   "fieldname": "column_break_gjn0n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4d11v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11v1r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "world_lettre",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> pour les lettres </h5>\n</div>"
+  },
+  {
+   "fieldname": "column_break_bodc6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "logo_section",
+   "fieldtype": "Section Break",
+   "label": "Logo"
+  },
+  {
+   "default": "4.6",
+   "fieldname": "largeur_logo",
+   "fieldtype": "Float",
+   "label": "Largeur Logo"
+  },
+  {
+   "default": "1.3",
+   "fieldname": "hauteur_logo",
+   "fieldtype": "Float",
+   "label": "Hauteur Logo"
+  },
+  {
+   "fieldname": "taille_logo",
+   "fieldtype": "Float",
+   "label": "Taille Logo"
+  },
+  {
+   "fieldname": "column_break_spkdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_krmxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cheque_size",
+   "fieldtype": "Select",
+   "label": "Taille cheque",
+   "options": "Regular\nA4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-29 12:37:20.290806",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Modele de cheque",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
