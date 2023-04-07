@@ -24,7 +24,7 @@
   "date_commence",
   "num_matricule",
   "section_break_qq0un",
-  "acounts_company",
+  "accounts_company",
   "section_break_2l0ga",
   "default_rib",
   "column_break_pqkqx",
@@ -124,12 +124,6 @@
    "label": "Matricule Fiscal"
   },
   {
-   "fieldname": "acounts_company",
-   "fieldtype": "Table",
-   "label": "Liste des Comptes",
-   "options": "Societe_Details"
-  },
-  {
    "fieldname": "default_rib",
    "fieldtype": "Data",
    "label": "RIB par Defaut",
@@ -152,11 +146,17 @@
   {
    "fieldname": "section_break_2l0ga",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accounts_company",
+   "fieldtype": "Table",
+   "label": "Liste des Comptes",
+   "options": "Societe_Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-23 12:10:16.891925",
+ "modified": "2023-03-30 10:33:53.658673",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Societe",

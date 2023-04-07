@@ -90,7 +90,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Payment",
-   "link_count": 3,
+   "link_count": 7,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -107,9 +107,49 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "payment",
+   "label": "Payment Depenses",
    "link_count": 0,
    "link_to": "Reglement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journee Depenses",
+   "link_count": 0,
+   "link_to": "Journee Depenses",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Recettes",
+   "link_count": 0,
+   "link_to": "Recette",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Remise",
+   "link_count": 0,
+   "link_to": "Remise",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journee Recettes",
+   "link_count": 0,
+   "link_to": "Journee Recettes",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -125,7 +165,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-03-27 13:05:15.847302",
+ "modified": "2023-04-06 11:46:57.448031",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Payment",

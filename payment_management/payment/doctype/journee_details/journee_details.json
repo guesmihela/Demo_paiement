@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-05 11:47:08.866465",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "depense",
+  "montant_net",
+  "tiers",
+  "reference",
+  "default_currency",
+  "nature_depense",
+  "service_depense",
+  "mode_payment",
+  "state",
+  "ref_virement",
+  "num_cheque",
+  "date_emission",
+  "date_validation"
+ ],
+ "fields": [
+  {
+   "fieldname": "depense",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Depense",
+   "options": "Despenses"
+  },
+  {
+   "fieldname": "montant_net",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "B\u00e9n\u00e9ficiare",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "R\u00e9f\u00e9rence"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "nature_depense",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nature",
+   "options": "Nature"
+  },
+  {
+   "fieldname": "service_depense",
+   "fieldtype": "Link",
+   "label": "Service",
+   "options": "Service"
+  },
+  {
+   "fieldname": "mode_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode Reglement",
+   "options": "\nCheque\nVirement"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nCREE\nEMISE\nVALIDEE"
+  },
+  {
+   "fieldname": "ref_virement",
+   "fieldtype": "Data",
+   "label": "Ref virement"
+  },
+  {
+   "fieldname": "num_cheque",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Cheque"
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Date",
+   "label": "Date Emission"
+  },
+  {
+   "fieldname": "date_validation",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Validation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-06 11:52:59.876316",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Journee_Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

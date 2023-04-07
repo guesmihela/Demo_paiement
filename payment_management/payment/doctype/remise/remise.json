@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-04-04 09:57:31.753191",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "state",
+  "mode_payment",
+  "societe_name",
+  "default_currency",
+  "column_break_pcfoa",
+  "accounts",
+  "banque",
+  "rib",
+  "rib_party",
+  "section_break_m4jgd",
+  "recettes",
+  "section_break_wsiul",
+  "date_creation",
+  "column_break_asefd",
+  "date_edition"
+ ],
+ "fields": [
+  {
+   "fieldname": "recettes",
+   "fieldtype": "Table",
+   "label": "Recettes",
+   "options": "Recettes_Details"
+  },
+  {
+   "fieldname": "mode_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mode Reglement",
+   "options": "\nTraite\nCheque"
+  },
+  {
+   "fieldname": "banque",
+   "fieldtype": "Link",
+   "label": "Banque",
+   "options": "Banque"
+  },
+  {
+   "fieldname": "date_creation",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Creation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "CREE\nEDITEE\nVALIDEE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pcfoa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_m4jgd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wsiul",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": ".YYYY.MM.DD.####"
+  },
+  {
+   "fieldname": "date_edition",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Edition",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "label": "RIB",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_asefd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "societe_name",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "accounts",
+   "fieldtype": "Link",
+   "label": "Compte",
+   "options": "Compte Societe"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Data",
+   "label": "Devise",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "rib_party",
+   "fieldtype": "Data",
+   "label": "RIB par Defaut",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-07 08:37:06.177234",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Remise",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

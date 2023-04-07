@@ -45,7 +45,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Mode de r\u00e8glement",
-   "options": "\nCheque\nVirement\nEspeces",
+   "options": "\nCheque\nVirement",
    "read_only": 1
   },
   {
@@ -111,7 +111,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-03-27 08:47:27.130010",
+ "modified": "2023-04-05 11:47:13.542084",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Depense_Details",

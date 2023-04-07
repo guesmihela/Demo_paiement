@@ -10,15 +10,15 @@ class Tiers(Document):
 	def validate(self):
 		self.set_default_account()
 	def set_default_account(self):
-		if not self.acounts:
+		if not self.accounts:
 			self.default_account = ""
 			return
-		if len([account.compte for account in self.acounts if account.is_default]) == 0:
+		if len([account.compte for account in self.accounts if account.is_default]) == 0:
 			frappe.throw(_("Tiers doit avoir un {0} par defaut.").format(frappe.bold("Compte")))
-		elif len([account.compte for account in self.acounts if account.is_default]) > 1:
+		elif len([account.compte for account in self.accounts if account.is_default]) > 1:
 			frappe.throw(_("un seul {0} peut etre compte par defaut.").format(frappe.bold("Compte")))
 		default_account_exists = False
-		for d in self.acounts:
+		for d in self.accounts:
 			if d.is_default == 1:
 				default_account_exists = True
 				self.default_account = d.compte.strip()

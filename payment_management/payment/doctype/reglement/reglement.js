@@ -41,6 +41,7 @@ frappe.ui.form.on('Reglement', {
 	      d.state = 'EMISE'
 	      d.date_emission =  frappe.datetime.nowdate()
 	   });
+	   frm.set_value("date_emission", frappe.datetime.nowdate())
 	},
 	 /*expenses_on_form_rendered: function(frm, cdt, cdn) {
         var grid = frm.fields_dict.expenses.grid;

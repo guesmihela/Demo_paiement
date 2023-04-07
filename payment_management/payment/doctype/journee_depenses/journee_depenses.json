@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-05 11:49:41.279033",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "depenses",
+  "date_cloture"
+ ],
+ "fields": [
+  {
+   "default": "Non Clotur\u00e9e",
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Non Clotur\u00e9e\nClotur\u00e9e",
+   "read_only": 1
+  },
+  {
+   "fieldname": "depenses",
+   "fieldtype": "Table",
+   "label": "Depenses",
+   "options": "Journee_Details"
+  },
+  {
+   "fieldname": "date_cloture",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Cloture",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-05 12:55:00.237523",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Journee Depenses",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

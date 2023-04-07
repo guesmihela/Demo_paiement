@@ -3,6 +3,14 @@
 
 frappe.ui.form.on('Despenses', {
 	refresh: function(frm) {
+	  //frm.doc.state = ''
+	  if(frm.is_new())
+	  {
+	    frm.set_value("state" , " ");
+	  }
+
+	// },
+	 //on_load: function(frm) {
 	  frm.set_query("nature_depense", function() {
 			return {
 				filters:{

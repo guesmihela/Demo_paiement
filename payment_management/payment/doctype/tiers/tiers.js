@@ -65,16 +65,15 @@ frappe.ui.form.on("Tiers_Details", {
 frappe.ui.form.on("Tiers_Details", {
   is_default: function(frm,cdt,cdn) {
 	  var row = locals[cdt][cdn];
+	  var checked_count = 0;
 	  $.each(frm.doc.accounts || [], function(i, d) {
-	  if(row.compte !== d.compte)
-	  {
-	    d.is_default = 0;
-	  }
+	    if(d.is_default && d.is_default === 1 && d.name !== row.name) {
+			d.is_default = 0;
+			checked_count++;
+			frm.refresh_field("accounts");
+	    }
 	  });
-	  if(row.is_default = 1)
-	  {
-	    frm.set_value("rib" , row.rib);
-        frm.refresh_field("rib");
-	  }
+	  frm.set_value("rib" , row.rib);
+      frm.refresh_field("rib");
 	}
 });

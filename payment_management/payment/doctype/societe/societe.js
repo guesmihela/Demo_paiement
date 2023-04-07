@@ -2,11 +2,36 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Societe', {
-	// refresh: function(frm) {
 
-	// }
+
+	 refresh: function(frm) {
+	   if(frm.is_new())
+	   {
+	     frm.set_df_property('accounts_company', 'hidden', 1);
+	   }
+	   frm.fields_dict['accounts_company'].grid.get_field("compte").get_query = function(doc, cdt,cdn)
+	   {
+	     return{
+           "filters": {
+             "societe_name" : frm.doc.name
+           }
+	     }
+	  }
+
+	 }
 });
 frappe.ui.form.on("Societe_Details", {
+ /* setup: function(frm,cdt,cdn)
+  {
+      console.log("societe" + frm.doc.name);
+      frm.set_query("compte", function() {
+			return {
+				filters:{
+					"societe_name": frm.doc.name
+				}
+			}
+	  });
+  },*/
   compte: function(frm,cdt,cdn)
   {
       var row = locals[cdt][cdn];
@@ -34,12 +59,20 @@ frappe.ui.form.on("Societe_Details", {
 	  //console.log("nombre compte"+row.is_default);
 	  //var nbr_def_cpte = 0;
 	  var checked_count = 0;
-	  $.each(frm.doc.accounts || [], function(i, d) {
+	  $.each(frm.doc.accounts_company || [], function(i, d) {
+	    if(d.is_default && d.is_default === 1 && d.name !== row.name) {
+			d.is_default = 0;
+			checked_count++;
+			frm.refresh_field("accounts_company");
+	    }
+	  });
+	  /*$.each(frm.doc.accounts || [], function(i, d) {
 	    if(d.is_default && d.is_default === 1 && d.name !== row.name) {
 			d.is_default = 0;
 			checked_count++;
 	    }
-	  });
+	  });*/
+	  console.log("nombre compte"+checked_count);
 	  frm.set_value("default_rib" , row.rib);
 	  frm.set_value("default_account" , row.compte);
 	  frm.set_value("default_currency" , row.default_currency);
@@ -47,9 +80,9 @@ frappe.ui.form.on("Societe_Details", {
       frm.refresh_field("default_account");
       frm.refresh_field("default_currency");
 	  console.log("nombre compte"+ checked_count)
-	  if(checked_count > 0) {
+	  /*if(checked_count > 0) {
 			frappe.throw(__('Only one checkbox can be selected.'));
-	  }
+	  }*/
 	  /*if(d.is_default == 1)
 	  {
 	      $.each(frm.doc.accounts || [], function(i, d) {
@@ -96,7 +129,7 @@ frappe.ui.form.on("Societe_Details", {
 	  }*/
 	}
 });
-frappe.ui.form.on("Societe_Details", {
+/*frappe.ui.form.on("Societe_Details", {
   is_default: function(frm,cdt,cdn) {
 	  var row = locals[cdt][cdn];
 	  $.each(frm.doc.accounts || [], function(i, d) {
@@ -113,7 +146,7 @@ frappe.ui.form.on("Societe_Details", {
         frm.refresh_field("default_rib");
 	  }
 	}
-});
-frappe.ui.form.on('Societe_Details','acounts_company_add',function(frm,cdt,cdn) {
+});*/
+frappe.ui.form.on('Societe_Details','accounts_company_add',function(frm,cdt,cdn) {
         frappe.model.set_value(cdt, cdn,"default_currency","");
 });

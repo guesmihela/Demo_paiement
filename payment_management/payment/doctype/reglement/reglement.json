@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2023-03-16 17:48:40.044203",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "state",
   "societe_name",
   "accounts",
   "default_currency",
@@ -16,7 +18,10 @@
   "rib",
   "rib_party",
   "section_break_dn10l",
-  "expenses"
+  "expenses",
+  "date_validation",
+  "date_emission",
+  "naming_series"
  ],
  "fields": [
   {
@@ -53,7 +58,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Mode Reglement",
-   "options": "\nCheque\nVirement\nEsp\u00e8ces\nCarte bancaire",
+   "options": "\nCheque\nVirement",
    "reqd": 1
   },
   {
@@ -86,14 +91,45 @@
    "fieldtype": "Data",
    "label": "RIB",
    "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nEMIS\nVALIDEE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_validation",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Validation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Emission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "Reg -.YYYY.-"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-27 09:21:01.276596",
+ "modified": "2023-04-06 13:47:41.681741",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Reglement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

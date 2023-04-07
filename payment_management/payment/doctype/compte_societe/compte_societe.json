@@ -14,7 +14,6 @@
   "default_currency",
   "column_break_qait1",
   "is_default",
-  "account_type",
   "bank_name",
   "rib"
  ],
@@ -33,12 +32,6 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "N\u00b0 Compte"
-  },
-  {
-   "fieldname": "account_type",
-   "fieldtype": "Select",
-   "label": "Account Type",
-   "options": "\nAccumulated Depreciation\nAsset Received But Not Billed\nBank\nCash\nChargeable\nCapital Work in Progress\nCost of Goods Sold\nDepreciation\nEquity\nExpense Account\nExpenses Included In Asset Valuation\nExpenses Included In Valuation\nFixed Asset\nIncome Account\nPayable\nReceivable\nRound Off\nStock\nStock Adjustment\nStock Received But Not Billed\nService Received But Not Billed\nTax\nTemporary"
   },
   {
    "fieldname": "column_break_qait1",
@@ -80,7 +73,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-27 08:23:16.078553",
+ "modified": "2023-04-06 13:46:35.928285",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Compte Societe",

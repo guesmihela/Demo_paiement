@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:reference",
+ "creation": "2023-04-03 10:32:43.133281",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "column_break_f5hx8",
+  "mode_payment",
+  "section_break_hpfol",
+  "d\u00e9tails_emetteur",
+  "section_break_tnvds",
+  "tiers",
+  "party_type",
+  "column_break_5mcso",
+  "first_last_name",
+  "num_compte",
+  "social_reason",
+  "section_break_zr1mk",
+  "d\u00e9tails_recettes",
+  "section_break_fiemr",
+  "reference",
+  "num_cheque",
+  "num_traite",
+  "montant_net",
+  "default_currency",
+  "column_break_ssc5a",
+  "echeance",
+  "avalisee",
+  "nature_recette",
+  "service_recette",
+  "date_emission",
+  "journee"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.tiers ",
+   "fieldname": "num_compte",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00b0 Compte",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Cheque'",
+   "fieldname": "num_cheque",
+   "fieldtype": "Data",
+   "label": "N\u00b0 de Ch\u00e8que"
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Traite'",
+   "fieldname": "num_traite",
+   "fieldtype": "Data",
+   "label": "N\u00b0 de Traite"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Devise",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Data",
+   "label": "Date Emission",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Traite'",
+   "fieldname": "echeance",
+   "fieldtype": "Data",
+   "label": "\u00c9ch\u00e9ance"
+  },
+  {
+   "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Traite'",
+   "fieldname": "avalisee",
+   "fieldtype": "Select",
+   "label": "Avalis\u00e9e",
+   "options": "\nOui\nNon"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "R\u00e9f\u00e9rence",
+   "unique": 1
+  },
+  {
+   "fieldname": "nature_recette",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nature de recette",
+   "options": "Nature"
+  },
+  {
+   "fieldname": "service_recette",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Service de recette",
+   "options": "Service"
+  },
+  {
+   "fieldname": "section_break_hpfol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5mcso",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zr1mk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ssc5a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f5hx8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "d\u00e9tails_emetteur",
+   "fieldtype": "HTML",
+   "options": "<h4>D\u00e9tails \u00c9metteur</h4>"
+  },
+  {
+   "fieldname": "d\u00e9tails_recettes",
+   "fieldtype": "HTML",
+   "options": "<h4>D\u00e9tails Recette</h4>"
+  },
+  {
+   "fieldname": "section_break_tnvds",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fiemr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mode_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mode Reglement",
+   "options": "\nTraite\nCheque",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.tiers ",
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Type Emetteur",
+   "options": "Company\nIndividual",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nCREE\nEMISE\nVALIDEE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "\u00c9metteur",
+   "options": "Tiers"
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Individual'",
+   "fieldname": "first_last_name",
+   "fieldtype": "Data",
+   "label": "Nom Prenom",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.tiers && doc.party_type == 'Company'",
+   "fieldname": "social_reason",
+   "fieldtype": "Data",
+   "label": "Raison Sociale",
+   "read_only": 1
+  },
+  {
+   "fieldname": "montant_net",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant"
+  },
+  {
+   "fieldname": "journee",
+   "fieldtype": "Data",
+   "label": "Journee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-06 12:39:04.680212",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Recette",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

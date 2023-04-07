@@ -29,7 +29,8 @@
   "section_break_ln9vk",
   "integration_id",
   "column_break_8yrbh",
-  "last_integration_date"
+  "last_integration_date",
+  "tier"
  ],
  "fields": [
   {
@@ -160,11 +161,17 @@
    "fieldname": "is_company",
    "fieldtype": "Check",
    "label": "Societe"
+  },
+  {
+   "fieldname": "tier",
+   "fieldtype": "Link",
+   "label": "Tier",
+   "options": "Tiers"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-27 08:58:17.064122",
+ "modified": "2023-03-31 13:39:41.010161",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Compte",

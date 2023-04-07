@@ -19,7 +19,8 @@
   "raison_social",
   "section_break_w6unc",
   "accounts",
-  "rib"
+  "rib",
+  "default_account"
  ],
  "fields": [
   {
@@ -93,11 +94,16 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "options": "Company\nIndividual"
+  },
+  {
+   "fieldname": "default_account",
+   "fieldtype": "Data",
+   "label": "Compte Par Defaut"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-27 13:00:57.912947",
+ "modified": "2023-04-03 13:43:40.940711",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Tiers",

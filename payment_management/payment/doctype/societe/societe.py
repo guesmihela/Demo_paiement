@@ -8,7 +8,17 @@ from frappe.model.document import Document
 class Societe(Document):
 	pass
 
+	#def after_save(self):
+		#if self.accounts_company:
+			#for row in self.accounts_company:
+				#frappe.db.set_value("Compte Societe", row.compte, "is_default", row.is_default)
 	def validate(self):
+
+		if self.accounts_company:
+			for row in self.accounts_company:
+				frappe.db.set_value("Compte Societe", row.compte, "is_default", row.is_default)
+		#for row in self.accounts_company:
+			#frappe.db.set_value("Compte Societe", row.compte, "is_default", row.is_default)
 		self.update_default_account = False
 		if self.is_new():
 			self.update_default_account = True
@@ -40,16 +50,16 @@ class Societe(Document):
 			frappe.throw(_("Abbreviation already used for another company"))
 
 	def set_default_account(self):
-		if not self.acounts_company:
+		if not self.accounts_company:
 			self.default_account = ""
 			return
-		if len([account.compte for account in self.acounts_company if account.is_default]) == 0:
+		if len([account.compte for account in self.accounts_company if account.is_default]) == 0:
 			frappe.throw(_("Société doit avoir un {0} par defaut.").format(frappe.bold("Compte")))
-		elif len([account.compte for account in self.acounts_company if account.is_default]) > 1:
+		elif len([account.compte for account in self.accounts_company if account.is_default]) > 1:
 			frappe.throw(_("un seul {0} peut etre compte par defaut.").format(frappe.bold("Compte")))
 
 		default_account_exists = False
-		for d in self.acounts_company:
+		for d in self.accounts_company:
 			if d.is_default == 1:
 				default_account_exists = True
 				self.default_account = d.compte.strip()

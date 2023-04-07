@@ -6,10 +6,13 @@ from frappe.model.document import Document
 
 class Despenses(Document):
 	pass
-	#def validate(self):
-		#if self.is_new():
-			#self.state = 'CREE'
+	def validate(self):
+		if self.is_new():
+			self.state = 'CREE'
 
-	def after_save(self):
-		self.state = 'CREE'
+	#def validate(self):
+		#self.state = 'CREE'
+
+	#def after_save(self):
+		#self.state = 'CREE'
 
