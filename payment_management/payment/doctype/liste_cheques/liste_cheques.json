@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-17 10:35:58.974930",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "num_cheque",
+  "account",
+  "bank",
+  "num_operation",
+  "debit_operation",
+  "credit_operation",
+  "type_operation",
+  "date_emission",
+  "tiers",
+  "column_break_oueba",
+  "amount",
+  "signed",
+  "depose",
+  "date_annulation",
+  "raison_annulation"
+ ],
+ "fields": [
+  {
+   "fieldname": "num_cheque",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Numero ch\u00e9que"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Compte",
+   "options": "Compte"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Banque",
+   "options": "Banque"
+  },
+  {
+   "fieldname": "num_operation",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Op\u00e9ration"
+  },
+  {
+   "fieldname": "debit_operation",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "D\u00e9bit Op\u00e9ration"
+  },
+  {
+   "fieldname": "credit_operation",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cr\u00e9dit Op\u00e9ration"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type Op\u00e9ration",
+   "options": "Ch\u00e9que Emis"
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Emission"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "B\u00e9n\u00e9ficiare",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant"
+  },
+  {
+   "fieldname": "signed",
+   "fieldtype": "Data",
+   "label": "Sign\u00e9 par "
+  },
+  {
+   "default": "0",
+   "fieldname": "depose",
+   "fieldtype": "Check",
+   "label": "D\u00e9pos\u00e9"
+  },
+  {
+   "fieldname": "date_annulation",
+   "fieldtype": "Date",
+   "label": "Date annulation"
+  },
+  {
+   "fieldname": "raison_annulation",
+   "fieldtype": "Text Editor",
+   "label": "Raison annulation"
+  },
+  {
+   "fieldname": "column_break_oueba",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-17 10:57:22.682421",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Liste cheques",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

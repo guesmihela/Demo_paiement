@@ -13,7 +13,9 @@
   "tiers",
   "default_currency",
   "nature_recette",
-  "service_recette"
+  "service_recette",
+  "state",
+  "mode_payment"
  ],
  "fields": [
   {
@@ -60,12 +62,24 @@
    "fieldtype": "Link",
    "label": "Service Recette",
    "options": "Service"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nCREE\nEMISE\nVALIDEE"
+  },
+  {
+   "fieldname": "mode_payment",
+   "fieldtype": "Select",
+   "label": "Mode Reglement",
+   "options": "\nTraite\nCheque"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-04 10:30:08.692189",
+ "modified": "2023-04-07 10:28:15.060893",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Recettes_Details",

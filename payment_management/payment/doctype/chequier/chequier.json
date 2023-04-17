@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-17 10:26:00.378509",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "num_ch",
+  "societe_name",
+  "account",
+  "bank",
+  "column_break_he408",
+  "first_num",
+  "last_num",
+  "check_length",
+  "nbr_ch",
+  "button_generate",
+  "section_break_rijdn",
+  "cheques_details",
+  "numero_dernier_cheque"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_num",
+   "fieldtype": "Int",
+   "label": "Num Debut"
+  },
+  {
+   "fieldname": "last_num",
+   "fieldtype": "Int",
+   "label": "Num Fin"
+  },
+  {
+   "fieldname": "check_length",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Longueur de numero ch\u00e8ques"
+  },
+  {
+   "fieldname": "nbr_ch",
+   "fieldtype": "Int",
+   "label": "Nombre de ch\u00e9ques",
+   "read_only": 1
+  },
+  {
+   "fieldname": "num_ch",
+   "fieldtype": "Int",
+   "label": "Numero ch\u00e9quier"
+  },
+  {
+   "depends_on": "eval:doc.societe_name ",
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Compte",
+   "options": "Compte Societe"
+  },
+  {
+   "depends_on": "eval:doc.societe_name && doc.account",
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Banque",
+   "options": "Banque",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cheques_details",
+   "fieldtype": "Table",
+   "label": "Listes des Ch\u00e9ques",
+   "options": "Liste cheques"
+  },
+  {
+   "fieldname": "column_break_he408",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rijdn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "button_generate",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "G\u00e9n\u00e9rer"
+  },
+  {
+   "fieldname": "societe_name",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "numero_dernier_cheque",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Dernier numero_cheque"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-17 12:45:24.255716",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Chequier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

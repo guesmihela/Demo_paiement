@@ -30,6 +30,7 @@
                    "date_edition": frappe.datetime.nowdate()});
               });
 		 }
+		 listview.refresh()
 		 }
 	  }
       function validation_remise()
@@ -63,8 +64,9 @@
                    "state": 'VALIDEE',
                    "date_validation": frappe.datetime.nowdate()});
               });
-
 		   }
+		   listview.refresh()
+		   msgprint(__(" Validation effectuée avec succès"));
 	     }
 
       }

@@ -84,7 +84,7 @@ frappe.listview_settings['Recette'] = frappe.listview_settings['Recette'] || {
 			        args: {
 				        doctype: "Recette",
 				        filters: {"name": selected_docs[i]['name']},
-				        fieldname: ["reference", "tiers", "montant_net", "default_currency", "nature_recette", "service_recette", "mode_payment","state"]
+				        fieldname: ["reference", "tiers", "montant_net", "default_currency", "default_emission", "date_validation, "nature_recette", "service_recette", "mode_payment","state"]
 			            },
 			            callback: function(r)
 			            {
@@ -100,8 +100,8 @@ frappe.listview_settings['Recette'] = frappe.listview_settings['Recette'] || {
 	                          'state'          : r.message["state"],
 	                          'echeance': '',
 	                          'avalise': '',
-	                          'date_emission': '',
-	                          'date_validation': ''
+	                          'date_emission': r.message["date_emission"],
+	                          'date_validation': r.message["date_validation"]
 	                       };
 	                       itemsP.push(item_P);
 		                }
@@ -152,7 +152,9 @@ frappe.listview_settings['Recette'] = frappe.listview_settings['Recette'] || {
                  frappe.db.set_value("Journee Recettes", doc.name,{
                    "state": 'Non Cloturée'});
               });
-               }
+           }
+           listview.refresh()
+           msgprint(__(" Annulation effectuée avec succès"));
 		   }
       }
       listview.page.add_action_item(__("Creation Remise"),()=> remise());

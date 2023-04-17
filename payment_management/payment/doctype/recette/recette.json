@@ -62,7 +62,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Devise",
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   },
   {
    "fieldname": "date_emission",
@@ -89,6 +90,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "R\u00e9f\u00e9rence",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -175,7 +177,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "\u00c9metteur",
-   "options": "Tiers"
+   "options": "Tiers",
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.tiers && doc.party_type == 'Individual'",
@@ -195,17 +198,19 @@
    "fieldname": "montant_net",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Montant"
+   "label": "Montant",
+   "reqd": 1
   },
   {
    "fieldname": "journee",
    "fieldtype": "Data",
-   "label": "Journee"
+   "label": "Journee",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-06 12:39:04.680212",
+ "modified": "2023-04-13 07:48:01.848765",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Recette",

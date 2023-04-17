@@ -13,13 +13,12 @@
  ],
  "fields": [
   {
-   "default": "Non Clotur\u00e9e",
    "fieldname": "state",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Non Clotur\u00e9e\nClotur\u00e9e",
-   "read_only": 1
+   "options": "\nNon Clotur\u00e9e\nClotur\u00e9e"
   },
   {
    "fieldname": "depenses",
@@ -37,7 +36,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-05 12:55:00.237523",
+ "modified": "2023-04-14 12:28:24.571476",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Journee Depenses",

@@ -159,13 +159,13 @@
    "is_query_report": 0,
    "label": "Template Impression Cheque",
    "link_count": 0,
-   "link_to": "Template Impression Cheque",
+   "link_to": "Modele de cheque",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-04-06 11:46:57.448031",
+ "modified": "2023-04-11 08:17:37.962599",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Payment",

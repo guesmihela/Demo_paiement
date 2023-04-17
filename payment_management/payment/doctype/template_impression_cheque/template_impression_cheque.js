@@ -30,9 +30,9 @@ frappe.ui.form.on('Template Impression Cheque', {
 						width: {{ amt_in_word_width }}cm;\
 						line-height: {{ amt_in_words_line_spacing }}cm;\
 						word-wrap: break-word;"> Payez contre ce chèque non endossable </span>\
-					<fieldset style =" display:inline-block;border:1px solid #000; width:3.6cm; padding:16px; margin-top:4.4cm; margin-left:0.3cm; height:2.2cm"><legend style ="padding: 6px 6px; font-size:0.8rem;"><span>Payable à </span></legend>\
+					<fieldset style ="display:inline-block;border:1px solid #000; width:3.6cm; padding:16px; margin-top:4.4cm; margin-left:0.3cm; height:2.2cm"><legend style ="padding: 6px 6px; font-size:9px;"><span>Payable à &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp يدفع بـ</span></legend>\
 					</fieldset>\
-					<fieldset style =" display:inline-block;border:1px solid #000; width:7.4cm; padding:16px; margin-top:4.4cm; margin-left:0.3cm"><legend style ="padding: 10px 10px; font-size:0.8rem;"><span>Titulaire du compte </span></legend>\
+					<fieldset style =" display:inline-block;border:1px solid #000; width:7.4cm; padding:16px; margin-top:4.4cm; margin-left:0.3cm"><legend style ="padding: 10px 10px; font-size:9px;"><span>Titulaire du compte </span><span>صاحب الحساب</span></legend>\
 					<span style="top: {{ acc_no_dist_from_top_edge }}cm;\
 						left: {{ acc_no_dist_from_left_edge }}cm;\
 						position: absolute;"> Acc. No. </span>\

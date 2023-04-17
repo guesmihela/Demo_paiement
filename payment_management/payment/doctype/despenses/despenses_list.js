@@ -1,11 +1,20 @@
 frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] || {
     hide_name_column : true, // HIDE THE NAME COLUMN IN THE LAST
-	//add_fields: ["identity_number", "branch", "identity_type", "state"],
-	filters: [
-	   ["state","=","CREE"]
-	],
+	/*filters: [['Status', '=', 'CREE']
+	]*/
+	//filters: [["state", "=", "CREE"]],
+	refresh: function(listview) {
+     frappe.route_options = {"state": ["=", "CREE"]};
+    },
 	onload: function(listview) {
-
+	// add filter to show only records with status "CREE"
+	  /*list_view.filter_area.add([
+			['Status', 'Equals', 'Virement']
+	  ]);*/
+      // add a custom filter to the list view
+      //list_view.filter_area.add_filter("status", "Open");
+	  //list_view.filter_area.add_filter("state", "CREE");
+	  frappe.route_options = {"state": ["=", "CREE"]};
       var items = [];
       var itemsP = [];
       var item = {};
@@ -99,7 +108,7 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
 			        args: {
 				        doctype: "Despenses",
 				        filters: {"name": selected_docs[i]['name']},
-				        fieldname: ["reference", "tiers", "montant_net", "default_currency", "nature_depense", "service_depense", "mode_payment","state"]
+				        fieldname: ["reference", "tiers", "montant_net", "default_currency", "date_emission", "date_validation", "nature_depense", "service_depense", "mode_payment","state"]
 			            },
 			            callback: function(r)
 			            {
@@ -115,8 +124,8 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
 	                          'state'          : r.message["state"],
 	                          'ref_virement': '',
 	                          'num_cheque': '',
-	                          'date_emission': '',
-	                          'date_validation': ''
+	                          'date_emission': r.message["date_emission"],
+	                          'date_validation': r.message["date_validation"]
 	                       };
 	                       itemsP.push(item_P);
 		                }
@@ -156,6 +165,9 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
               .then(doc => {
                  frappe.db.set_value("Despenses", doc.name,{
                    "state": 'CREE'});
+                 frappe.db.set_value("Journee Depenses", doc.journee,{
+                   "state": 'Non Cloturée'});
+                 frappe.db.commit();
               });
               console.log("tessttt" + selected_docs[i]['journee']);
               /*frappe.db.get_doc("Journee Depenses", null, {"name": depense.name})
@@ -165,11 +177,9 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
               });*/
               frappe.db.get_doc("Journee Depenses", null, {"name": selected_docs[i]['journee']})
               .then(doc => {
-                 frappe.db.set_value("Journee Depenses", doc.name,{
-                   "state": 'Non Cloturée'});
+                 frappe.db.set_value("Journee Depenses", doc.name,
+                   doc.state, 'Non Cloturée');
               });
-
-
              /*if (selected_docs[i] !== undefined)
              {
                  var doc = frappe.model.get_new_doc("Reglement");
@@ -246,21 +256,19 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
 			     frappe.set_route("Form", "Reglement", doc.name);
 			     }*/
                }
+               listview.refresh()
+               msgprint(__(" Annulation effectuée avec succès"));
 		   }
       }
       listview.page.add_action_item(__("Paiement/ Reglement"),()=> paiement());
       listview.page.add_action_item(__("Journee Depenses"),()=> edition_journee());
       listview.page.add_action_item(__("Annuler Depenses"),()=> annuler_depenses());
-
       /*listview.page.add_inner_button('Paiement/ Reglement',()=> paiement()).addClass("btn-primary");
       listview.page.add_inner_button('Validation Reglement',()=> validation_paiement()).addClass("btn-primary");*/
-
-
       /*if($(".page-actions").is(":visible") == true)
       {
          alert("Div is visible!!");
       }*/
-
 	},
     get_indicator: function(doc) {
         if(doc.state === "CREE")
@@ -275,6 +283,5 @@ frappe.listview_settings['Despenses'] = frappe.listview_settings['Despenses'] ||
         {
            return [__("VALIDEE"), "blue", "state,=,VALIDEE"];
         }
-
 	}
 };

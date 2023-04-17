@@ -1,7 +1,11 @@
   frappe.listview_settings['Journee Depenses'] = frappe.listview_settings['Journee Depenses'] ||
   {
     hide_name_column : true, // HIDE THE NAME COLUMN IN THE LAST
-	onload: function(listview) {
+    refresh: function(listview) {
+     frappe.route_options = {"state": ["=", "Non Cloturée"]};
+    },
+    onload: function(listview) {
+	  frappe.route_options = {"state": ["=", "Non Cloturée"]};
 	  $('.primary-action').hide();
       $('*[data-fieldname="name"]').hide();
       function cloture_journees()
