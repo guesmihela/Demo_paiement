@@ -3,6 +3,5 @@
 
 # import frappe
 from frappe.model.document import Document
-
 class Compensationcheque(Document):
 	pass

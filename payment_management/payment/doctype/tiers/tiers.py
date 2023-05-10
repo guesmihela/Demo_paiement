@@ -7,6 +7,8 @@ from frappe import _
 
 class Tiers(Document):
 	pass
+	def autoname(self):
+		self.name = self.party
 	def validate(self):
 		self.set_default_account()
 	def set_default_account(self):

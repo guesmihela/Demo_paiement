@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-28 14:44:11.352543",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "num_cheque",
+  "societe_name",
+  "account",
+  "rib",
+  "bank",
+  "column_break_qg0no",
+  "tiers",
+  "depense",
+  "amount",
+  "default_currency",
+  "date_emission",
+  "adresse",
+  "agence",
+  "tel",
+  "section_break_duola",
+  "cheque"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "B\u00e9n\u00e9ficiare",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Compte",
+   "options": "Compte Societe"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Banque",
+   "options": "Banque"
+  },
+  {
+   "fieldname": "date_emission",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date emission"
+  },
+  {
+   "fieldname": "cheque",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "societe_name",
+   "fieldtype": "Link",
+   "label": "Societe",
+   "options": "Societe"
+  },
+  {
+   "fieldname": "column_break_qg0no",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_duola",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "num_cheque",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00b0 Ch\u00e9que"
+  },
+  {
+   "fieldname": "depense",
+   "fieldtype": "Link",
+   "label": "D\u00e9pense",
+   "options": "Despenses"
+  },
+  {
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "label": "RIB"
+  },
+  {
+   "fieldname": "agence",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Adresse agence"
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Agence"
+  },
+  {
+   "fieldname": "tel",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "T\u00e9l agence"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-03 15:04:48.601732",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Lettre Cheque",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

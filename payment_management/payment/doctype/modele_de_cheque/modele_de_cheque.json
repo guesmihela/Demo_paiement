@@ -68,6 +68,10 @@
   "dist_pay_top_edge",
   "dist_pay_left_edge",
   "informations_agence_section",
+  "agence",
+  "agence_supp",
+  "agence_gauche",
+  "column_break_3xdkv",
   "adresse_b",
   "add_supp",
   "add_gauche",
@@ -230,7 +234,7 @@
    "options": "<div>\n<h5> Adresse du banque </h5>\n</div>"
   },
   {
-   "default": "4.5",
+   "default": "4.9",
    "fieldname": "add_supp",
    "fieldtype": "Float",
    "label": "Distance du bord sup\u00e9rieur"
@@ -247,7 +251,7 @@
    "options": "<div>\n<h5> Telephone du banque </h5>\n</div>"
   },
   {
-   "default": "4.9",
+   "default": "5.3",
    "fieldname": "tel_supp",
    "fieldtype": "Float",
    "label": "Distance du bord sup\u00e9rieur"
@@ -268,19 +272,19 @@
    "options": "<div>\n<h5> Date de creation du compte </h5>\n</div>"
   },
   {
-   "default": "0.9",
+   "default": "5.58",
    "fieldname": "date_supp",
    "fieldtype": "Float",
    "label": "Distance du bord sup\u00e9rieur"
   },
   {
-   "default": "2.4",
+   "default": "6.7",
    "fieldname": "date_gauche",
    "fieldtype": "Float",
    "label": "Emplacement de d\u00e9part depuis le bord gauche"
   },
   {
-   "default": "5.3",
+   "default": "5.7",
    "fieldname": "date_cpt_supp",
    "fieldtype": "Float",
    "label": "Distance du bord sup\u00e9rieur"
@@ -303,13 +307,13 @@
    "options": "<div>\n<h5> Numero du compte</h5>\n</div>"
   },
   {
-   "default": "0.1",
+   "default": "4.5",
    "fieldname": "num_cpt_supp",
    "fieldtype": "Float",
    "label": "Distance du bord sup\u00e9rieur"
   },
   {
-   "default": "2",
+   "default": "5",
    "fieldname": "num_cpt_gauche",
    "fieldtype": "Float",
    "label": "Emplacement de d\u00e9part depuis le bord gauche"
@@ -330,7 +334,7 @@
    "label": "Distance du bord sup\u00e9rieur"
   },
   {
-   "default": "2",
+   "default": "5",
    "fieldname": "nom_gauche",
    "fieldtype": "Float",
    "label": "Emplacement de d\u00e9part depuis le bord gauche"
@@ -581,7 +585,7 @@
    "label": "emplacement du bord superieur"
   },
   {
-   "default": "11.7",
+   "default": "0.3",
    "fieldname": "dist_sign_left_edge",
    "fieldtype": "Float",
    "label": "Emplacement du bord gauche"
@@ -694,11 +698,32 @@
    "fieldname": "sign_left",
    "fieldtype": "Float",
    "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "agence",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h5> Agence </h5>\n</div>"
+  },
+  {
+   "default": "4.5",
+   "fieldname": "agence_supp",
+   "fieldtype": "Float",
+   "label": "Distance du bord sup\u00e9rieur"
+  },
+  {
+   "default": "0.8",
+   "fieldname": "agence_gauche",
+   "fieldtype": "Float",
+   "label": "Emplacement de d\u00e9part depuis le bord gauche"
+  },
+  {
+   "fieldname": "column_break_3xdkv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-12 13:13:46.873953",
+ "modified": "2023-05-08 17:33:42.300921",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Modele de cheque",

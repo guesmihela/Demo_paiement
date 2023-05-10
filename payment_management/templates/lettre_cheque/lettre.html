@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .ordre-recv{
+         width: 100%;
+       }
+      .dest-cl{
+         text-shadow: none !important;
+         float: right;
+         margin-right: 80px;
+         margin-left: 20px;
+         margin-top: 100px;
+         margin-bottom: 50px;
+        }
+      .coord-cl{
+         text-shadow: none !important;
+         text-align: left;
+         float: left;
+        }
+      .body-cl{
+         text-shadow: none !important;
+         text-align: left;
+         float: left;
+        }
+    </style>
+</head>
+<body>
+<div class ="coord-cl">
+     <p>Nom Destinataire:  <b>{{lettre_doc.tiers}}</b><br/>
+     Adresse du destinataire<br/>
+     Code postal- Ville<br/>
+        À ..., le <b>{{frappe.datetime.now_date()}}</b></p>
+    </div>
+   <div>
+       <!-- {% set u = frappe.get_doc("Company", doc.company) %}
+           {{ u.country or '' }}
+           {{u.address or ''}}  TO print company address
+
+        {% if llawyer_doc.person %}
+           {{llawyer_doc.person}}
+           {% set u = frappe.get_doc("Contact", llawyer_doc.person) %}
+           <p>{{ u.first_name or "" }}</p>
+        {% endif %}
+         {% last, first = frappe.db.get_value('Contact', llawyer_doc.person, ['last_name', 'first_name']) %}
+        <h3>{{ last }}</h3>
+        <p>{{ first }}</p>
+        {{_("You can also copy-paste this {0} to your browser").format(verification_link) }}
+
+        {% uc = frappe.db.get_doc("User", "Administrator") %}
+        {%  doc = frappe.db.get_doc('Contact', llawyer_doc.person) %}
+		-->
+       <!--exeeeeeeeeeeeeeemple d'exportation data-->
+         <!--{% u = frappe.db.get_doc("Contact", llawyer_doc.person) %}
+        {{ u.first_name }}
+        {% f = frappe.user.full_name() %}
+        {%= __("My Profile") %}
+        <p>{{ f }}</p>
+        {% verification_link = frappe.get_doc('Contact', llawyer_doc.person) %}
+        {% testing = 'it worked' %}
+        {% another = testing %}
+        {{ another }}-->
+        <div>
+
+       </div>
+       <div>
+
+</div>
+
+    </div>
+    <div class ="body-cl">
+        <div class ="ordre-recv"><p><u><b>OBJET : ORDRE De RECOUVREMENT</b></u></p><p>Madame, Monsieur</br></p></div>
+        <P>Nous vous prions d utiliser la présente lettre comme ordre pour entamer immédiatement une procédure de recouvrement en notre nom contre  pour des dettes et des factures impayés d'un montant de <b>{{lettre_doc.amount}}</b> </P>
+        <p>Vous trouverz çi_joint les documents y affèrent dont vous aurez besoin dans votre procédure</p>
+        <p>Nous garderons en lieu sûr les copies originales des documents pour valoir et servir si nécessaire ce que de droit devant le cour</p>
+    <p>Au cas où vous auriez besoin d un document ou d une information ,prière de contacter l auteur de la présente lettre </p>
+
+    <p>Bien vouloir joindre les plaintes pour notre appréciations ainsi que les frais de justice y affèrents correspondants au montant de la facture <b>{{lettre_doc.amount}}</b></p>
+    <p>Nous vous prions de nous tenir informés de l evolution du cas et de nous prévenir dés que nos frais de justice atteignent un montant de </p>
+    <p>Recevez, Madame, Monsieur ,nos salutations distingués</p>
+    </div>
+<div class ="coord-cl">
+     <p>Prénom et Nom : <b>{{lettre_doc.tiers}}</b><br/>
+ 	  Votre adresse : <br/>
+      Code postal: <br/>
+      Ville : </p>
+    </div>
+</body>
+</html>

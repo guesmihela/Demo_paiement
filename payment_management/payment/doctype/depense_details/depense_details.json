@@ -56,6 +56,7 @@
    "read_only": 1
   },
   {
+   "default": "____",
    "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Virement'",
    "fieldname": "ref_virement",
    "fieldtype": "Data",
@@ -63,6 +64,7 @@
    "label": "Ref\u00e9rence Virement"
   },
   {
+   "default": "____",
    "depends_on": "eval:doc.mode_payment && doc.mode_payment == 'Cheque'",
    "fieldname": "num_cheque",
    "fieldtype": "Data",
@@ -111,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-05 11:47:13.542084",
+ "modified": "2023-04-20 10:10:02.329670",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Depense_Details",

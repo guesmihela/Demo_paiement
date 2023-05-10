@@ -3,15 +3,15 @@
 
 frappe.ui.form.on('Tiers', {
 	refresh: function(frm) {
-	frm.set_query("party_type", function() {
+	/*frm.set_query("party_type", function() {
 			return{
 				filters: {
 					"name": ["in", Object.keys(frappe.boot.party_account_types)],
 				}
 			}
-		});
+		});*/
 	},
-	party: function(frm) {
+	/*party: function(frm) {
 		if(frm.doc.party_type && frm.doc.party) {
 			return frappe.call({
 				method: "payment_management.payment.doctype.tiers.tiers.get_party_details",
@@ -29,7 +29,7 @@ frappe.ui.form.on('Tiers', {
 				}
 			});
 		}
-	}
+	}*/
 });
 frappe.ui.form.on("Tiers_Details", {
   compte: function(frm,cdt,cdn)
@@ -74,6 +74,8 @@ frappe.ui.form.on("Tiers_Details", {
 	    }
 	  });
 	  frm.set_value("rib" , row.rib);
+	  frm.set_value("default_account" , row.compte);
+	  frm.refresh_field("default_account");
       frm.refresh_field("rib");
 	}
 });

@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-28 10:55:59.801339",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "num_operation",
+  "type_operation",
+  "banque",
+  "tire_par",
+  "amount",
+  "credit",
+  "debit"
+ ],
+ "fields": [
+  {
+   "fieldname": "num_operation",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Op\u00e9ration"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type Operation",
+   "options": "Virement des Salaires"
+  },
+  {
+   "fieldname": "banque",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Banque",
+   "options": "Banque"
+  },
+  {
+   "fieldname": "tire_par",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tir\u00e9 par",
+   "options": "Tiers"
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Currency",
+   "label": "Cr\u00e9dit"
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "label": "D\u00e9bit"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-28 11:57:45.491746",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "OperationsV_List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

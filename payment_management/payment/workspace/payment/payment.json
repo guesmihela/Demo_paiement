@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"gFATp2t89x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Payment</span>\",\"col\":12}},{\"id\":\"v8iMhWrF3t\",\"type\":\"card\",\"data\":{\"card_name\":\"Societ\u00e9\",\"col\":4}},{\"id\":\"OAZ34sclZp\",\"type\":\"card\",\"data\":{\"card_name\":\"D\u00e9tails Bancaires\",\"col\":4}},{\"id\":\"Omzh4Q7vCp\",\"type\":\"card\",\"data\":{\"card_name\":\"Payment\",\"col\":4}}]",
+ "content": "[{\"id\":\"gFATp2t89x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Paiement</span>\",\"col\":12}},{\"id\":\"v8iMhWrF3t\",\"type\":\"card\",\"data\":{\"card_name\":\"Societ\u00e9\",\"col\":4}},{\"id\":\"Nq3Pxt5Nrs\",\"type\":\"card\",\"data\":{\"card_name\":\"Tiers\",\"col\":4}},{\"id\":\"OAZ34sclZp\",\"type\":\"card\",\"data\":{\"card_name\":\"D\u00e9tails Bancaires\",\"col\":4}},{\"id\":\"Omzh4Q7vCp\",\"type\":\"card\",\"data\":{\"card_name\":\"Paiement\",\"col\":4}},{\"id\":\"_KgLLhhZwM\",\"type\":\"card\",\"data\":{\"card_name\":\"Recettes\",\"col\":4}}]",
  "creation": "2023-03-21 14:23:27.297876",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -41,8 +41,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "D\u00e9tails Bancaires",
-   "link_count": 4,
+   "label": "Tiers",
+   "link_count": 2,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -59,7 +59,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Compte Bancaire",
+   "label": "Compte Tiers",
    "link_count": 0,
    "link_to": "Compte",
    "link_type": "DocType",
@@ -69,60 +69,10 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Type Compte",
-   "link_count": 0,
-   "link_to": "Type Compte",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Banque",
-   "link_count": 0,
-   "link_to": "Banque",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Payment",
-   "link_count": 7,
+   "label": "Recettes",
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Depenses",
-   "link_count": 0,
-   "link_to": "Despenses",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Payment Depenses",
-   "link_count": 0,
-   "link_to": "Reglement",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Journee Depenses",
-   "link_count": 0,
-   "link_to": "Journee Depenses",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   },
   {
    "hidden": 0,
@@ -137,7 +87,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Remise",
+   "label": "Remise ",
    "link_count": 0,
    "link_to": "Remise",
    "link_type": "DocType",
@@ -157,15 +107,111 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Template Impression Cheque",
+   "label": "Paiement",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Depenses",
+   "link_count": 0,
+   "link_to": "Despenses",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reglement",
+   "link_count": 0,
+   "link_to": "Reglement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journee Depenses",
+   "link_count": 0,
+   "link_to": "Journee Depenses",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "D\u00e9tails Bancaires",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Banque",
+   "link_count": 0,
+   "link_to": "Banque",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Modele de Ch\u00e9ques",
    "link_count": 0,
    "link_to": "Modele de cheque",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reception Chequier",
+   "link_count": 0,
+   "link_to": "Chequier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lettres Ch\u00e8ques",
+   "link_count": 0,
+   "link_to": "Lettre Cheque",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ordre Virement",
+   "link_count": 0,
+   "link_to": "Ordre Virement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bordereau Versement",
+   "link_count": 0,
+   "link_to": "Bordereau Virement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-04-11 08:17:37.962599",
+ "modified": "2023-04-28 14:45:56.141505",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Payment",

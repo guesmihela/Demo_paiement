@@ -11,6 +11,8 @@ frappe.ui.form.on('Chequier', {
 			}
 	   });
 
+
+
 	},
 	first_num: function(frm) {
 	  frm.set_value("numero_dernier_cheque", frm.doc.first_num)
@@ -26,7 +28,8 @@ frappe.ui.form.on('Chequier', {
     else
     {
       var nbr_cheque = frm.doc.last_num - frm.doc.first_num;
-	  frm.set_value("nbr_ch" , nbr_cheque);
+      var nbr = nbr_cheque + 1
+	  frm.set_value("nbr_ch" , nbr);
     }
 	},
 	societe_name: function(frm) {
@@ -44,6 +47,24 @@ frappe.ui.form.on('Chequier', {
             frm.set_value("account", r.message.default_account)
 		  }
 		});
+		// Retrieve all chequier_list documents that attached to account
+        frappe.db.get_list('Chequier', {
+          filters: {
+            'account': frm.doc.account
+          }
+        }).then(function(chequier_list) {
+          // Do something with the list of chequier
+           console.log(chequier_list.length);
+           if(chequier_list.length == 0)
+		   {
+		     var numero_chequier = 1
+		   }
+		   else
+		   {
+		     var numero_chequier = chequier_list.length + 1
+		   }
+		   frm.set_value("num_ch", numero_chequier)
+        });
 	},
 	account: function(frm) {
 	    frappe.call({
@@ -52,13 +73,32 @@ frappe.ui.form.on('Chequier', {
 		  args:
 		  {
 			 doctype: "Compte Societe",
-			 filters: {"name": frm.doc.accounts},
-			 fieldname: ["bank_name"]
+			 filters: {"name": frm.doc.account},
+			 fieldname: ["name","bank_name"]
 		  },
 		  callback: function(r)
 		  {
+		    console.log(r.message.bank_name)
             frm.set_value("bank", r.message.bank_name)
 		  }
 		});
+				// Retrieve all chequier_list documents that attached to account
+        frappe.db.get_list('Chequier', {
+          filters: {
+            'account': frm.doc.account
+          }
+        }).then(function(chequier_list) {
+          // Do something with the list of chequier
+           console.log(chequier_list.length);
+           if(chequier_list.length == 0)
+		   {
+		     var numero_chequier = 1
+		   }
+		   else
+		   {
+		     var numero_chequier = chequier_list.length + 1
+		   }
+		   frm.set_value("num_ch", numero_chequier)
+        });
 	}
 });

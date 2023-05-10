@@ -53,10 +53,10 @@ class Societe(Document):
 		if not self.accounts_company:
 			self.default_account = ""
 			return
-		if len([account.compte for account in self.accounts_company if account.is_default]) == 0:
-			frappe.throw(_("Société doit avoir un {0} par defaut.").format(frappe.bold("Compte")))
-		elif len([account.compte for account in self.accounts_company if account.is_default]) > 1:
-			frappe.throw(_("un seul {0} peut etre compte par defaut.").format(frappe.bold("Compte")))
+		#if len([account.compte for account in self.accounts_company if account.is_default]) == 0:
+		#	frappe.throw(_("Société doit avoir un {0} par defaut.").format(frappe.bold("Compte")))
+		#elif len([account.compte for account in self.accounts_company if account.is_default]) > 1:
+		#	frappe.throw(_("un seul {0} peut etre compte par defaut.").format(frappe.bold("Compte")))
 
 		default_account_exists = False
 		for d in self.accounts_company:

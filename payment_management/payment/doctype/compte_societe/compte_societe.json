@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:account_name",
  "creation": "2023-03-16 18:48:37.707455",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,12 +9,17 @@
  "field_order": [
   "account_name",
   "account_number",
+  "rib",
   "societe_name",
   "default_currency",
+  "bank_name",
+  "date_creation",
   "column_break_qait1",
   "is_default",
-  "bank_name",
-  "rib"
+  "agence",
+  "adresse",
+  "tel",
+  "sign"
  ],
  "fields": [
   {
@@ -24,6 +28,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Nom compte",
+   "read_only": 1,
    "unique": 1
   },
   {
@@ -31,7 +36,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "N\u00b0 Compte"
+   "label": "N\u00b0 Compte",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_qait1",
@@ -43,13 +49,15 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Societe",
-   "options": "Societe"
+   "options": "Societe",
+   "reqd": 1
   },
   {
    "fieldname": "bank_name",
    "fieldtype": "Link",
    "label": "Banque",
-   "options": "Banque"
+   "options": "Banque",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -63,21 +71,48 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Devise Compte",
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   },
   {
    "fieldname": "rib",
    "fieldtype": "Data",
-   "label": "RIB"
+   "label": "RIB",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agence",
+   "fieldtype": "Data",
+   "label": "Agence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Data",
+   "label": "Adresee Agence"
+  },
+  {
+   "fieldname": "tel",
+   "fieldtype": "Data",
+   "label": "Tel Agence"
+  },
+  {
+   "fieldname": "date_creation",
+   "fieldtype": "Date",
+   "label": "Date Creation"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Signature",
+   "label": "Signature"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-06 13:46:35.928285",
+ "modified": "2023-05-04 15:31:34.682332",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Compte Societe",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

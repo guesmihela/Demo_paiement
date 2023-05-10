@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-28 10:50:11.475567",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "societe_name",
+  "account",
+  "bank",
+  "column_break_9o4it",
+  "type_bordereau",
+  "type_operation",
+  "date_depot",
+  "default_currency",
+  "rib",
+  "section_break_uhsoo",
+  "liste"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "R\u00e9f\u00e9rence "
+  },
+  {
+   "fieldname": "type_bordereau",
+   "fieldtype": "Select",
+   "label": "Type bordereau",
+   "options": "\nVirement"
+  },
+  {
+   "fieldname": "date_depot",
+   "fieldtype": "Date",
+   "label": "Date d\u00e9pot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "liste",
+   "fieldtype": "Table",
+   "label": "LIstes des Operations",
+   "options": "OperationsV_List"
+  },
+  {
+   "fieldname": "type_operation",
+   "fieldtype": "Select",
+   "label": "Type operation",
+   "options": "\nVirement des Salaires"
+  },
+  {
+   "fieldname": "column_break_9o4it",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uhsoo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "societe_name",
+   "fieldtype": "Link",
+   "label": "Soci\u00e9t\u00e9",
+   "options": "Societe"
+  },
+  {
+   "depends_on": "eval:doc.societe_name",
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Banque",
+   "options": "Banque"
+  },
+  {
+   "depends_on": "eval:doc.societe_name",
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Compte",
+   "options": "Compte Societe"
+  },
+  {
+   "depends_on": "eval:doc.societe_name",
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Devise",
+   "options": "Currency"
+  },
+  {
+   "depends_on": "eval:doc.societe_name",
+   "fieldname": "rib",
+   "fieldtype": "Data",
+   "label": "RIB"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-03 15:11:12.365213",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Bordereau Virement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

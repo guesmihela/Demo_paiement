@@ -3,6 +3,5 @@
 
 frappe.ui.form.on('Compensation cheque', {
 	// refresh: function(frm) {
-
 	// }
 });
