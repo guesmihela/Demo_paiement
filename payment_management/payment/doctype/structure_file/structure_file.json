@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-19 14:31:32.455923",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "structure_name",
+  "column_break_spcmx",
+  "module_name",
+  "column_break_v6hap",
+  "doctype_name",
+  "section_break_bkuu5",
+  "champs"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.module_name",
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "Doctype Name",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "champs",
+   "fieldtype": "Table",
+   "label": "Champs",
+   "options": "Champ"
+  },
+  {
+   "fieldname": "column_break_v6hap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bkuu5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "structure_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_spcmx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "module_name",
+   "fieldtype": "Link",
+   "label": "Module Name",
+   "options": "Module Def"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-02 12:37:22.327876",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "Structure File",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

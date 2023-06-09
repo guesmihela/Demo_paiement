@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-05-16 10:46:04.624684",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agence",
+  "cgnie",
+  "sinis",
+  "code_tiers",
+  "doss",
+  "annsieg",
+  "borsieg",
+  "numsieg",
+  "honor",
+  "montant_regl",
+  "code_ben",
+  "ben",
+  "code_reg",
+  "bordr",
+  "wsaa",
+  "areg",
+  "mreg",
+  "jreg",
+  "oper",
+  "ling",
+  "sinin",
+  "ag",
+  "fs",
+  "ns",
+  "cle",
+  "br",
+  "sui",
+  "suii",
+  "siiii",
+  "montreg",
+  "honorair",
+  "retenue"
+ ],
+ "fields": [
+  {
+   "fieldname": "agence",
+   "fieldtype": "Data",
+   "label": "AGENCE",
+   "unique": 1
+  },
+  {
+   "fieldname": "cgnie",
+   "fieldtype": "Data",
+   "label": "CGNIE"
+  },
+  {
+   "fieldname": "sinis",
+   "fieldtype": "Data",
+   "label": "SINIS"
+  },
+  {
+   "fieldname": "code_tiers",
+   "fieldtype": "Data",
+   "label": "CODTIER"
+  },
+  {
+   "fieldname": "doss",
+   "fieldtype": "Data",
+   "label": "DOSSIEG"
+  },
+  {
+   "fieldname": "annsieg",
+   "fieldtype": "Data",
+   "label": "ANNSIEG"
+  },
+  {
+   "fieldname": "borsieg",
+   "fieldtype": "Data",
+   "label": "BORSIEG"
+  },
+  {
+   "fieldname": "numsieg",
+   "fieldtype": "Data",
+   "label": "NUMSIEG"
+  },
+  {
+   "fieldname": "montant_regl",
+   "fieldtype": "Data",
+   "label": "MONTREG"
+  },
+  {
+   "fieldname": "code_ben",
+   "fieldtype": "Data",
+   "label": "CODBEN"
+  },
+  {
+   "fieldname": "ben",
+   "fieldtype": "Data",
+   "label": "BENEFIC"
+  },
+  {
+   "fieldname": "code_reg",
+   "fieldtype": "Data",
+   "label": "CODREG"
+  },
+  {
+   "fieldname": "bordr",
+   "fieldtype": "Data",
+   "label": "BORDEREAU"
+  },
+  {
+   "fieldname": "honor",
+   "fieldtype": "Data",
+   "label": "HONORAIR"
+  },
+  {
+   "fieldname": "wsaa",
+   "fieldtype": "Data",
+   "label": "WSAA"
+  },
+  {
+   "fieldname": "areg",
+   "fieldtype": "Data",
+   "label": "AREG"
+  },
+  {
+   "fieldname": "mreg",
+   "fieldtype": "Data",
+   "label": "MREG"
+  },
+  {
+   "fieldname": "jreg",
+   "fieldtype": "Data",
+   "label": "JREG"
+  },
+  {
+   "fieldname": "sinin",
+   "fieldtype": "Data",
+   "label": "SININ"
+  },
+  {
+   "fieldname": "oper",
+   "fieldtype": "Data",
+   "label": "OPER"
+  },
+  {
+   "fieldname": "ling",
+   "fieldtype": "Data",
+   "label": "LIGN"
+  },
+  {
+   "fieldname": "ag",
+   "fieldtype": "Data",
+   "label": "AG"
+  },
+  {
+   "fieldname": "fs",
+   "fieldtype": "Data",
+   "label": "FS"
+  },
+  {
+   "fieldname": "ns",
+   "fieldtype": "Data",
+   "label": "NS"
+  },
+  {
+   "fieldname": "cle",
+   "fieldtype": "Data",
+   "label": "CLE"
+  },
+  {
+   "fieldname": "br",
+   "fieldtype": "Data",
+   "label": "BR"
+  },
+  {
+   "fieldname": "sui",
+   "fieldtype": "Data",
+   "label": "SUI"
+  },
+  {
+   "fieldname": "suii",
+   "fieldtype": "Data",
+   "label": "SII"
+  },
+  {
+   "fieldname": "siiii",
+   "fieldtype": "Data",
+   "label": "SIII"
+  },
+  {
+   "fieldname": "montreg",
+   "fieldtype": "Data",
+   "label": "MONTREG"
+  },
+  {
+   "fieldname": "honorair",
+   "fieldtype": "Data",
+   "label": "HONORAIR"
+  },
+  {
+   "fieldname": "retenue",
+   "fieldtype": "Data",
+   "label": "RETENUE-ANC"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-09 17:13:45.415707",
+ "modified_by": "Administrator",
+ "module": "payment",
+ "name": "fichier_plat",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

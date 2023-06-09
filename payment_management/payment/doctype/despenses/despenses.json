@@ -212,9 +212,10 @@
    "label": "Journee"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-06 13:48:38.468569",
+ "modified": "2023-05-24 12:00:57.955145",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Despenses",

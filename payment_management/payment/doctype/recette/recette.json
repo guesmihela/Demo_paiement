@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:reference",
  "creation": "2023-04-03 10:32:43.133281",
@@ -210,7 +211,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-13 07:48:01.848765",
+ "modified": "2023-05-19 16:55:35.337939",
  "modified_by": "Administrator",
  "module": "payment",
  "name": "Recette",
